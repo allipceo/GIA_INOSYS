@@ -1,0 +1,5 @@
+# Sensitive and local files
+.env
+*.log
+__pycache__/
+output/
