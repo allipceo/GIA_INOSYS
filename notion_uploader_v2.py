@@ -17,8 +17,14 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 # 환경 변수
-from dotenv import load_dotenv
-load_dotenv()
+try:
+    from dotenv import load_dotenv
+    try:
+        load_dotenv(encoding='utf-8')
+    except Exception as e:
+        logger.warning(f".env 로드 중 인코딩/파싱 오류 무시: {e}")
+except Exception as e:
+    logger.warning(f"python-dotenv 미설치: {e}")
 
 NOTION_TOKEN = os.getenv('NOTION_TOKEN')
 NOTION_DATABASE_ID = os.getenv('NOTION_DATABASE_ID')
@@ -83,7 +89,7 @@ def extract_semantics(text: str) -> Dict[str, Any]:
         import google.generativeai as genai
         genai.configure(api_key=GEMINI_KEY)
         prompt = (
-            "다음 텍스트의 핵심 키워드(최대 8개), 2문장 요약, 관련 인물(있으면) 리스트를 JSON으로만 출력하세요.\n" \
+            "다음 텍스트의 핵심 키워드(최대 8개), 2문장 요약, 관련 인물(있으면) 리스트를 JSON으로만 출력하세요.\n"
             "필드: keywords(list), summary(str), entities(list). 텍스트:\n" + text
         )
         model = genai.GenerativeModel(MODEL)

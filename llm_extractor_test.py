@@ -9,14 +9,21 @@ llm_extractor_test.py
 import os
 import sys
 from typing import Dict, Any
-from dotenv import load_dotenv
 
 # 로깅
 import logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-load_dotenv()
+# 환경변수 로드 (인코딩 오류 무시)
+try:
+    from dotenv import load_dotenv
+    try:
+        load_dotenv(encoding='utf-8')
+    except Exception as e:
+        logger.warning(f".env 로드 중 인코딩/파싱 오류 무시: {e}")
+except Exception as e:  # dotenv 자체가 없을 때
+    logger.warning(f"python-dotenv 미설치: {e}")
 
 GEMINI_KEY = os.getenv('GEMINI_API_KEY_1') or os.getenv('GEMINI_API_KEY_2')
 MODEL = os.getenv('GEMINI_MODEL', 'gemini-pro')
@@ -35,7 +42,7 @@ def real_extract(text: str) -> Dict[str, Any]:
         import google.generativeai as genai
         genai.configure(api_key=GEMINI_KEY)
         prompt = (
-            "다음 텍스트의 핵심 키워드(최대 8개), 2문장 요약, 관련 인물(있으면) 리스트를 JSON으로만 출력하세요.\n" \
+            "다음 텍스트의 핵심 키워드(최대 8개), 2문장 요약, 관련 인물(있으면) 리스트를 JSON으로만 출력하세요.\n"
             "필드: keywords(list), summary(str), entities(list). 텍스트:\n" + text
         )
         model = genai.GenerativeModel(MODEL)
