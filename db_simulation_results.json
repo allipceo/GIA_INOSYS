@@ -1,0 +1,303 @@
+{
+  "Documents_Master": {
+    "database_name": "Documents_Master",
+    "workspace": "GIA_INFOSYS",
+    "properties": {
+      "문서명": {
+        "type": "Title",
+        "description": "메인 식별자"
+      },
+      "문서ID": {
+        "type": "Text",
+        "description": "고유 식별 번호"
+      },
+      "원본소스": {
+        "type": "Select",
+        "options": [
+          "ceo.allip@gmail",
+          "choeunsang@gmail",
+          "MS_OneDrive",
+          "Google_Drive",
+          "기타"
+        ]
+      },
+      "문서유형": {
+        "type": "Select",
+        "options": [
+          "DOCX",
+          "PPTX",
+          "PDF",
+          "Mind Map",
+          "기타"
+        ]
+      },
+      "생성일자": {
+        "type": "Date"
+      },
+      "최종수정": {
+        "type": "Date"
+      },
+      "중요도": {
+        "type": "Select",
+        "options": [
+          "매우높음",
+          "높음",
+          "보통",
+          "낮음"
+        ]
+      },
+      "처리상태": {
+        "type": "Select",
+        "options": [
+          "신규",
+          "검토중",
+          "완료",
+          "보관"
+        ]
+      },
+      "키워드태그": {
+        "type": "Multi-select"
+      },
+      "요약내용": {
+        "type": "Rich Text"
+      },
+      "관련인물": {
+        "type": "Multi-select"
+      },
+      "원본링크": {
+        "type": "URL"
+      },
+      "추출텍스트": {
+        "type": "Rich Text"
+      }
+    },
+    "status": "created",
+    "created_at": "2025-08-22T18:31:16.272565"
+  },
+  "Projects_Master": {
+    "database_name": "Projects_Master",
+    "workspace": "GIA_INFOSYS",
+    "properties": {
+      "프로젝트명": {
+        "type": "Title",
+        "description": "메인 식별자"
+      },
+      "프로젝트ID": {
+        "type": "Text",
+        "description": "고유 식별 번호"
+      },
+      "상태": {
+        "type": "Select",
+        "options": [
+          "기획",
+          "진행중",
+          "완료",
+          "중단"
+        ]
+      },
+      "우선순위": {
+        "type": "Select",
+        "options": [
+          "최우선",
+          "높음",
+          "보통",
+          "낮음"
+        ]
+      },
+      "시작일": {
+        "type": "Date"
+      },
+      "목표일": {
+        "type": "Date"
+      },
+      "진행률": {
+        "type": "Number",
+        "format": "percent"
+      },
+      "담당자": {
+        "type": "Multi-select"
+      },
+      "마인드맵링크": {
+        "type": "URL"
+      },
+      "예산": {
+        "type": "Number",
+        "format": "number_with_commas"
+      },
+      "성과지표": {
+        "type": "Rich Text"
+      },
+      "메모": {
+        "type": "Rich Text"
+      }
+    },
+    "status": "created",
+    "created_at": "2025-08-22T18:31:16.273564"
+  },
+  "Knowledge_Graph": {
+    "database_name": "Knowledge_Graph",
+    "workspace": "GIA_INFOSYS",
+    "properties": {
+      "지식노드명": {
+        "type": "Title",
+        "description": "지식 항목 이름"
+      },
+      "노드ID": {
+        "type": "Text",
+        "description": "고유 식별자"
+      },
+      "지식유형": {
+        "type": "Select",
+        "options": [
+          "개념",
+          "인물",
+          "사건",
+          "기술",
+          "정책"
+        ]
+      },
+      "중요도점수": {
+        "type": "Number",
+        "format": "number"
+      },
+      "키워드": {
+        "type": "Multi-select"
+      },
+      "정의설명": {
+        "type": "Rich Text"
+      },
+      "최초입력": {
+        "type": "Date"
+      },
+      "최종갱신": {
+        "type": "Date"
+      },
+      "활용빈도": {
+        "type": "Number",
+        "format": "number"
+      },
+      "창의연결": {
+        "type": "Rich Text"
+      }
+    },
+    "status": "created",
+    "created_at": "2025-08-22T18:31:16.274562"
+  },
+  "People_Network": {
+    "database_name": "People_Network",
+    "workspace": "GIA_INFOSYS",
+    "properties": {
+      "인물명": {
+        "type": "Title",
+        "description": "성명"
+      },
+      "인물ID": {
+        "type": "Text",
+        "description": "고유 식별자"
+      },
+      "직책회사": {
+        "type": "Text",
+        "description": "현재 소속"
+      },
+      "관계유형": {
+        "type": "Select",
+        "options": [
+          "고객",
+          "파트너",
+          "전문가",
+          "정부관계자"
+        ]
+      },
+      "중요도": {
+        "type": "Select",
+        "options": [
+          "매우높음",
+          "높음",
+          "보통",
+          "낮음"
+        ]
+      },
+      "전문분야": {
+        "type": "Multi-select"
+      },
+      "연락처": {
+        "type": "Phone Number"
+      },
+      "이메일": {
+        "type": "Email"
+      },
+      "최근연락": {
+        "type": "Date"
+      },
+      "미팅이력": {
+        "type": "Rich Text"
+      },
+      "특이사항": {
+        "type": "Rich Text"
+      }
+    },
+    "status": "created",
+    "created_at": "2025-08-22T18:31:16.275562"
+  },
+  "Ideas_Incubator": {
+    "database_name": "Ideas_Incubator",
+    "workspace": "GIA_INFOSYS",
+    "properties": {
+      "아이디어명": {
+        "type": "Title",
+        "description": "아이디어 제목"
+      },
+      "아이디어ID": {
+        "type": "Text",
+        "description": "고유 식별자"
+      },
+      "발상일자": {
+        "type": "Date"
+      },
+      "발상출처": {
+        "type": "Select",
+        "options": [
+          "문서분석",
+          "AI제안",
+          "브레인스토밍",
+          "외부정보"
+        ]
+      },
+      "성숙도": {
+        "type": "Select",
+        "options": [
+          "초기",
+          "검토",
+          "기획",
+          "실행",
+          "완료"
+        ]
+      },
+      "사업성": {
+        "type": "Number",
+        "format": "number"
+      },
+      "실현가능성": {
+        "type": "Number",
+        "format": "number"
+      },
+      "필요자원": {
+        "type": "Rich Text"
+      },
+      "예상효과": {
+        "type": "Rich Text"
+      },
+      "액션플랜": {
+        "type": "Rich Text"
+      },
+      "위험요소": {
+        "type": "Rich Text"
+      },
+      "상태변경": {
+        "type": "Date"
+      }
+    },
+    "status": "created",
+    "created_at": "2025-08-22T18:31:16.276565"
+  }
+}
