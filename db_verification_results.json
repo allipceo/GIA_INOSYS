@@ -1,0 +1,38 @@
+{
+  "structure_verification": {
+    "Documents_Master_필수속성": "✅ 완료",
+    "Projects_Master_필수속성": "✅ 완료",
+    "Knowledge_Graph_필수속성": "✅ 완료",
+    "People_Network_필수속성": "✅ 완료",
+    "Ideas_Incubator_필수속성": "✅ 완료",
+    "Documents_Master_Formula": "✅ 완료",
+    "Projects_Master_Formula": "✅ 완료",
+    "Knowledge_Graph_Formula": "✅ 완료",
+    "Documents_Master_중요도_옵션": "✅ 완료",
+    "Projects_Master_상태_옵션": "✅ 완료",
+    "Knowledge_Graph_지식유형_옵션": "✅ 완료"
+  },
+  "relationship_verification": {
+    "Documents_Master_to_Projects_Master_프로젝트연결": "✅ 완료",
+    "Documents_Master_to_Knowledge_Graph_지식연결": "✅ 완료",
+    "Projects_Master_to_People_Network_담당자": "✅ 완료",
+    "Knowledge_Graph_to_Knowledge_Graph_상위개념/하위개념": "✅ 완료",
+    "People_Network_to_People_Network_네트워크연결": "✅ 완료",
+    "Knowledge_Graph_SelfRelation_순환방지": "✅ 완료",
+    "People_Network_SelfRelation_순환방지": "✅ 완료",
+    "Projects_Master_SelfRelation_순환방지": "✅ 완료",
+    "Projects_Master_관련문서수_Rollup": "✅ 완료",
+    "Projects_Master_완료문서비율_Rollup": "✅ 완료",
+    "Knowledge_Graph_연결문서수_Rollup": "✅ 완료"
+  },
+  "sample_data_test": {
+    "Documents_Master_효성중공업_신재생에너지_분석보고서": "✅ 테스트 완료",
+    "Documents_Master_AI_개인정보체계_구축방안": "✅ 테스트 완료",
+    "Documents_Master_일반_시장동향_참고자료": "✅ 테스트 완료",
+    "Knowledge_Graph_AI_기술": "✅ 테스트 완료",
+    "Knowledge_Graph_신재생에너지": "✅ 테스트 완료",
+    "Documents_Master_중요도점수_자동계산": "✅ 완료",
+    "Projects_Master_완료문서비율_자동계산": "✅ 완료",
+    "Knowledge_Graph_활용도점수_자동계산": "✅ 완료"
+  }
+}
